@@ -1,6 +1,6 @@
 https://studio.code.org/projects/applab/7tqjdEPW8cnA-XkWxklG3OKz9ZI1-AguIrxPc6tyhto
 
-# Cookie Klicker App
+# Cookie Clicker App
 ## Rechnen
 
 ### 
