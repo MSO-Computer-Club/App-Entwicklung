@@ -29,7 +29,7 @@ onEvent("cookie","click", addiere)
 
 ![image](./pics/graphic1.png)
 
-Wenn wir den Druck in die Konsole jetzt mit einer setText-Funktion für ein Label austauschen, haben wir ein Cookie Klicker Spiel:
+Wenn wir den Druck in die Konsole jetzt mit einer setText-Funktion für ein Label austauschen, haben wir ein Cookie Clicker Spiel:
 
 ###
 ```js
