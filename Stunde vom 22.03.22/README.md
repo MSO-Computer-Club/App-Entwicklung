@@ -26,6 +26,7 @@ onEvent("cookie","click", addiere)
 ```
 
 (Nach Erstellen eines Buttons mit der id "Cookie")
+
 ![image](./pics/graphic1.png)
 
 Wenn wir den Druck in die Konsole jetzt mit einer setText-Funktion für ein Label austauschen, haben wir ein Cookie Klicker Spiel:
