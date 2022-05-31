@@ -8,10 +8,10 @@ Wir wollen ein Feld mit Symbolen erstellen, die nachher in den Slots unserer Slo
 ```js
 var symbole = ["😈", "🎱", "7️⃣", "🍒", "🌞"]
 ```
-_(wir können in Windows mit Windowstaste + "."-Taste das Emoji-Menü so Emojis eingeben, diese können wir wie einfache Sätze oder Wörter zuvor in Anführungzeichen setzen, sodass sie als Zeichenkette verstanden werden)_
+_(wir können in Windows mit Windowstaste + "."-Taste das Emoji-Menü öffnen und so Emojis eingeben. Diese können wir dann wie einfache Sätze oder Wörter zuvor in Anführungzeichen setzen, sodass sie als Zeichenkette verstanden werden)_
 
 
-### (Wichtig: Die Elemente im Feld werden in eckigen Klammern [] und nicht in runden Klammern angegeben)
+### (Wichtig: Die Elemente im Feld werden in eckigen Klammern [] und nicht in runden Klammern () angegeben)
 
 #
 Im App Entwurf können wir nun einen einfachen Button "Hebel" und eine Textarea "Slot1" (für den ersten der drei Slots unserer Slot Machine) einfügen:
@@ -24,6 +24,7 @@ Wir erinnern uns daran, dass die Elemente in einem Feld alle einen Index (eine A
 Das sieht dann in unserem Feld so aus:
 
 ![image](./pics/graphic3.png)
+
 Mithilfe des Index können wir ein Element an einer bestimmten Stelle erhalten. Also wenn wir die Zeichenkette, die bei uns die Krische enthält erhalten wollen, können wir dieses mit dessen Index 3 erhalten: 
 
 ```js
@@ -31,9 +32,9 @@ console.log( symbole[3] )
 ```
 #
 ## Erstellen von Zufallszahlen
-Um nun in einem Slot ein zufälliges Symbol zu erhalten bräuchten wir bei jedem neuen Spiel eine zufällige Zahl zwischen 0 (dem ersten Index unseres Feldes) und in diesem speziellen Fall 4 (der letzte Index unserers Feldes)
+Um nun in einem Slot ein zufälliges Symbol zu erhalten benötigen wir bei jedem neuen Spiel eine zufällige Zahl zwischen 0 (dem ersten Index unseres Feldes) und in diesem speziellen Fall 4 (dem letzte Index unserers Feldes).
 
-Mit der Funktion Math.random() können wir zunächst eine zufällige Kommazahl von 0 bis 0,999999999999999999999999 (bis kurz vor die Eins, aber keine Eins :) ) erhalten:
+Mit der Funktion Math.random() können wir zunächst eine zufällige Kommazahl von 0 bis 0,999... (bis kurz vor die Eins, aber keine Eins :) ) erhalten:
 
 ```js
 console.log( Math.random() )
@@ -47,7 +48,7 @@ console.log( Math.random() * symbole.length )
 ```
 ![image](./pics/graphic5.png)
 
-=> Wir erhalten Zufallszahlen von 0 bis 4,9999999999999...
+=> Wir erhalten Zufallszahlen von 0 bis 4,999...
 
 Da wir aber noch Kommazahlen erhalten, unsere Indizes _(Plural von "Index" ist "Indizes", kleiner FunFact am Rande :)) )_ aber nur natürliche Zahlen sind (genauso wie man in Häusern mit Hausnummern 3 oder 6 lebt aber nicht nicht in 3,32768 oder 10,21638), müssen wir diese zahlen noch abrunden:
 
@@ -58,9 +59,9 @@ console.log( Math.floor( Math.random() * symbole.length ) )
 
 ### (Wichtig: Wir erhalten von dem Paket "Math.random() * symbole.length" eine Zahl, die wir dann in die Funktionsklammern von der Math.floor Funktion als Parameter einsetzen.)
 
-_(Wir verweden "Math.floor" um abzurunden (floor = Boden ~> nach unten) und nicht "Math.ceil" zu aufrunden (ceil -> ceiling = Decke ~> nach oben), da wir Zahlen von 0 (erster Index) bis 4 (letzter Index) erhalten wollen. "Mit Math.ceil" würden wir Zahlen von 1 bis 5 erhalten.)_
+_(Wir verweden "Math.floor" um abzurunden (floor = Boden ~> nach unten) und nicht "Math.ceil" zum aufrunden (ceil -> ceiling = Decke ~> nach oben), da wir Zahlen von 0 (erster Index) bis 4 (letzter Index) erhalten wollen. "Mit Math.ceil" würden wir Zahlen von 1 bis 5 erhalten.)_
 
-Wenn wir diese Zufallszahl nun als Index dort angeben, wo wir eben im Beispiel für die Kriche fest die "2" stehen hatten, erhalten wir jedes mal ein zufälliges Symbol:
+Wenn wir diese Zufallszahl nun als Index dort angeben, wo wir eben im Beispiel für die Kriche fest die "3" stehen hatten, erhalten wir jedes mal ein zufälliges Symbol:
 
 ```js
 console.log(symbole[ Math.floor(Math.random() * symbole.length) ])
