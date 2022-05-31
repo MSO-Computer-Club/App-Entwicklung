@@ -11,7 +11,7 @@ var symbole = ["😈", "🎱", "7️⃣", "🍒", "🌞"]
 _(wir können in Windows mit Windowstaste + "."-Taste das Emoji-Menü so Emojis eingeben, diese können wir wie einfache Sätze oder Wörter zuvor in Anführungzeichen setzen, sodass sie als Zeichenkette verstanden werden)_
 
 
-### (Wichtig: Die Elemente im Feld werden in eckigen Klammern [] und nciht in runden Klammern angegeben)
+### (Wichtig: Die Elemente im Feld werden in eckigen Klammern [] und nicht in runden Klammern angegeben)
 
 #
 Im App Entwurf können wir nun einen einfachen Button "Hebel" und eine Textarea "Slot1" (für den ersten der drei Slots unserer Slot Machine) einfügen:
